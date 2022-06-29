@@ -24,14 +24,16 @@ function start(){
 function collatz(num){
     let numbers = [num];
     let steps = [];
+
+    //contador de etapas
     let i = 0;
     while(num != 1){
-        //se o numero em questao for par divide ele por 2
         if(num % 2 == 0){
+            //se o numero em questao for par divide ele por 2
             num = num / 2;
             numbers.push(num);
-            //se o numero em questao for impar multiplica ele por 3 e soma 1
         } else if(num % 2 != 0){
+            //se o numero em questao for impar multiplica ele por 3 e soma 1
             num = num * 3 + 1;
             numbers.push(num);
         }
@@ -47,6 +49,7 @@ function chart(){
     const ctx = document.getElementById('myChart').getContext('2d');
 
     const labels = [
+        //insere todos os valores de steps como itens para o labels
         ...values[1]
     ]
 
@@ -74,9 +77,11 @@ function chart(){
 
 }
 
+//funcao para verificar a situacao do chart
 function chartStatus(){
     let chartStatus = Chart.getChart('myChart');
     if (chartStatus != undefined){
+        //caso ja exista um chart definido ele é destruido
         chartStatus.destroy();
     }
 }
