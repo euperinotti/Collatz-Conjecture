@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Collatz Conjecture</title>
 </head>
 <body>
-    <div id="user-input">
-        <input type="number" id="number">
-        <button onclick="start()">Calcular</button>
+    <div id="container">
+        <h1>Collatz Conjecture</h1>
+        <div id="user-input">
+            <input type="number" id="number" placeholder="10">
+            <button onclick="start()">Calcular</button>
+        </div>
+        <canvas id="myChart"></canvas>
     </div>
-    <canvas id="myChart" width="800px" height="800px"></canvas>
-
 
     <script src="script.js"></script>
 </body>

@@ -23,7 +23,7 @@ function start(){
 
 function collatz(num){
     let numbers = [num];
-    let steps = [];
+    let steps = [0];
 
     //contador de etapas
     let i = 0;
@@ -56,8 +56,9 @@ function chart(){
     const data = {
         labels: labels,
         datasets: [{
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
+        label: 'Pontos',
+        backgroundColor: 'rgb(23, 134, 224)',
+        borderColor: 'rgb(23, 134, 224)',
         data: values[0],
         }]
     };
